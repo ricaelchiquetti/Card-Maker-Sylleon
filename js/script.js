@@ -45,6 +45,15 @@ $(document).ready(function () {
         onChangeText("#inputNumberMove", "#cardMove", 2);
     });
 
+    $("#color").on("change", function () {
+        let color = $(this).val();
+        if (color) {
+            $("#cardBase").attr("src", 'img/base_' + color + '.svg');
+            $("#cardLine").attr("src", 'img/line_' + color + '.svg');
+            $("#cardIcon").attr("src", 'img/icon_' + color + '.svg');
+        }
+    });
+
     $("#file").on("change", function () {
         var reader = new FileReader();
         reader.onload = function (e) {
@@ -54,9 +63,9 @@ $(document).ready(function () {
     });
 
     $('#save-image-button').click(function () {
-        $(".div-overlay").css("top", "593px");//GAMBI
-        $("#cardTextType").css("top", "35px");//GAMBI
-        $(".number").css("top", "777px");
+        $(".div-overlay").css("top", "88%");//GAMBI
+        $("#cardTextType").css("top", "4%");//GAMBI
+        // $(".number").css("top", "777%");//GAMBI
 
         html2canvas($('#element-to-capture')[0]).then(function (canvas) {
             var link = document.createElement('a'),
@@ -67,14 +76,14 @@ $(document).ready(function () {
             link.click();
         });
 
-        $(".number").css("top", "772px");
+        $(".number").css("top", "772px");//GAMBI
         $("#cardTextType").css("top", "40px");//GAMBI
-        $(".div-overlay").css("top", "0px");
+        $(".div-overlay").css("top", "0px");//GAMBI
     });
 
     $("#save-button").click(function () {
         var data = {};
-        $("input").not("[type='file']").each(function () {
+        $("input:not([type='file']), select, textarea").each(function () {
             data[$(this).attr("id")] = $(this).val();
         });
 
@@ -90,7 +99,7 @@ $(document).ready(function () {
     });
 
     // Carregar dados do JSON novamente na tela
-    $("#load-button").on("change", function () {
+    $("#file-load-input").on("change", function () {
         var input = $("#file-load-input")[0];
 
         if (input.files && input.files[0]) {

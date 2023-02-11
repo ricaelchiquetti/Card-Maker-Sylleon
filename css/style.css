@@ -1,5 +1,5 @@
 :root {
-    --text-color: rgb(109, 16, 16);
+    --text-color: rgb(0, 0, 0, 0.7);
 }
 
 body {
@@ -116,11 +116,11 @@ img {
     left: 205px;
 }
 
-#cardRange {
+#cardMove {
     left: 326px;
 }
 
-#cardMove {
+#cardRange {
     left: 447px;
 }
 

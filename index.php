@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Minha Página</title>
+    <title>Sylleon Card Maker</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
@@ -18,17 +18,18 @@
     <div class="container">
         <div class="left-side">
             <input type="text" name="nome" id="inputTextName" placeholder="Nome" maxlength="100">
-            <input type="file" id="file" name="file">
-            <select name="icon">
-                <option value="">Selecione um Ícone</option>
+            <input type="file" id="file" name="file" accept="image/*">
+            <select name="Estilo">
+                <option value="creature">Criatura</option>
             </select>
-            <select name="cor">
+            <select name="cor" id="color">
                 <option value="">Selecione uma Cor</option>
                 <option value="red">Vermelho</option>
-                <option value="gree">Verde</option>
-                <option value="blue">Azul</option>
             </select>
             <input type="text" name="tipo" id="inputTextType" placeholder="Tipo" maxlength="200">
+            <select name="Habilidade">
+                <option value="">Selecione uma Habilidade</option>
+            </select>
             <textarea name="descricao" id="inputTextDesc" placeholder="Descrição"></textarea>
             <div class="numeric-fields">
                 <div class="field">
@@ -52,19 +53,19 @@
             <button id="save-button">Salvar para Edição</button>
             <div>
                 <label for="alcance">Carregar para Edição:</label>
-                <input type="file" id="file-load-input" name="file-load">
+                <input type="file" id="file-load-input" name="file-load" accept=".json">
             </div>
         </div>
         <div class="right-side">
             <div class="container">
                 <div id="element-to-capture">
-                    <img src="img/black_img.png" alt="card_art" id="cardArt">
-                    <img src="img/back_img.svg" alt="image_back">
-                    <img src="img/det_img.svg" alt="image_det">
-                    <img src="img/icon_img.svg" alt="image_icon">
+                    <img id="cardArt" src="img/black.png" alt="">
+                    <img id="cardBase" src="" alt="">
+                    <img id="cardLine" src="" alt="">
+                    <img id="cardIcon" src="" alt="">
                     <div class="div-overlay">
                         <div class="text-over-image" id="cardTextName">NOME</div>
-                        <div class="text-over-image" id="cardTextType">TIPO</div>
+                        <div class="text-over-image" id="cardTextType"></div>
                         <div class="text-over-image" id="cardTextDesc">DESCRIÇÃO</div>
                         <div class="text-over-image number" id="cardPower">00</div>
                         <div class="text-over-image number" id="cardDef">00</div>
