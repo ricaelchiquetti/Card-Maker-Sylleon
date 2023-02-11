@@ -55,8 +55,10 @@
                     <img src="img/black_img.png" alt="card_art" id="cardArt">
                     <img src="img/back_img.svg" alt="image_back">
                     <img src="img/det_img.svg" alt="image_det">
+                    <img src="img/icon_img.svg" alt="image_icon">
                     <div class="div-overlay">
                         <div class="text-over-image" id="cardTextName">NOME</div>
+                        <div class="text-over-image" id="cardTextType">TIPO</div>
                         <div class="text-over-image" id="cardTextDesc">DESCRIÇÃO</div>
                         <div class="text-over-image number" id="cardPower">00</div>
                         <div class="text-over-image number" id="cardDef">00</div>

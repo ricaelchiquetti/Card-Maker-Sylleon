@@ -1,3 +1,7 @@
+:root {
+    --text-color: rgb(109, 16, 16);
+}
+
 body {
     background-color: rgb(54, 54, 54);
     color: white;
@@ -75,6 +79,17 @@ img {
     font-weight: bold;
     left: 75px;
     top: 13px;
+    color: var(--text-color);
+}
+
+#cardTextType {
+    font-weight: bold;
+    left: 170px;
+    font-size: 12px;
+    top: 38px;
+    color: white;
+    text-align: center;
+    width: 235px;
 }
 
 #cardTextDesc {
@@ -87,7 +102,8 @@ img {
 
 .number {
     font-size: 1.3em;
-    top: 777px;
+    top: 772px;
+    color: var(--text-color);
     font-weight: bold;
 }
 

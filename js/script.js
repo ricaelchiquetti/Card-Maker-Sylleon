@@ -55,6 +55,8 @@ $(document).ready(function () {
 
     $('#save-image-button').click(function () {
         $(".div-overlay").css("top", "593px");//GAMBI
+        $("#cardTextType").css("top", "33px");//GAMBI
+        $(".number").css("top", "777px");
 
         html2canvas($('#element-to-capture')[0]).then(function (canvas) {
             var link = document.createElement('a');
@@ -62,7 +64,10 @@ $(document).ready(function () {
             link.href = canvas.toDataURL();
             link.click();
         });
+
+        $(".number").css("top", "772px");
         $(".div-overlay").css("top", "0px");
+        $("#cardTextType").css("top", "38px");//GAMBI
     });
 
 });
