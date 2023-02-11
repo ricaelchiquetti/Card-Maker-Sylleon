@@ -76,17 +76,18 @@ img {
 }
 
 #cardTextName {
-    font-weight: bold;
+    font-family: "Draconis";
+    font-size: 21px;
     left: 75px;
     top: 13px;
     color: var(--text-color);
 }
 
 #cardTextType {
-    font-weight: bold;
+    font-family: "Draconis";
     left: 170px;
-    font-size: 12px;
-    top: 38px;
+    font-size: 11px;
+    top: 40px;
     color: white;
     text-align: center;
     width: 235px;
@@ -123,7 +124,7 @@ img {
     left: 447px;
 }
 
-#save-image-button {
+button {
     background-color: rgb(46, 46, 46);
     color: white;
     padding: 10px 20px;
@@ -132,6 +133,6 @@ img {
     cursor: pointer;
 }
 
-#save-image-button:hover {
+button:hover {
     background-color: rgb(56, 56, 56);
 }

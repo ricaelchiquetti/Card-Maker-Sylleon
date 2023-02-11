@@ -5,6 +5,7 @@
     <meta charset="utf-8">
     <title>Minha Página</title>
     <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="css/font.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <script src="js/script.js"></script>
@@ -47,7 +48,12 @@
                     <input type="number" name="alcance" id="inputNumberRange">
                 </div>
             </div>
-            <button id="save-image-button">Salvar como imagem</button>
+            <button id="save-image-button">Salvar como Imagem</button>
+            <button id="save-button">Salvar para Edição</button>
+            <div>
+                <label for="alcance">Carregar para Edição:</label>
+                <input type="file" id="file-load-input" name="file-load">
+            </div>
         </div>
         <div class="right-side">
             <div class="container">
