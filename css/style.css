@@ -1,0 +1,121 @@
+body {
+    background-color: rgb(54, 54, 54);
+    color: white;
+    font-family: 'Oswald', sans-serif;
+}
+
+.container {
+    padding: 25px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.left-side {
+    width: 50%;
+    padding: 20px;
+}
+
+input,
+select,
+textarea {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.numeric-fields {
+    display: flex;
+    justify-content: space-between;
+}
+
+.field {
+    width: 20%;
+}
+
+.right-side {
+    width: 50%;
+    text-align: center;
+}
+
+img {
+    position: absolute;
+    width: 600px;
+    left: 0px;
+    top: 0px;
+}
+
+#element-to-capture {
+    position: absolute;
+    height: 835px;
+    width: 600px;
+}
+
+.container {
+    position: relative;
+}
+
+.div-overlay {
+    color: black;
+    top: 0px;
+    position: absolute;
+    height: 835px;
+    width: 600px;
+}
+
+.text-over-image {
+    position: absolute;
+    text-align: left;
+    padding: 10px;
+}
+
+#cardTextName {
+    font-weight: bold;
+    left: 75px;
+    top: 13px;
+}
+
+#cardTextDesc {
+    font-size: 1em;
+    left: 35px;
+    top: 506px;
+    width: 509px;
+    height: 235px;
+}
+
+.number {
+    font-size: 1.3em;
+    top: 777px;
+    font-weight: bold;
+}
+
+#cardPower {
+    left: 84px;
+}
+
+#cardDef {
+    left: 205px;
+}
+
+#cardRange {
+    left: 326px;
+}
+
+#cardMove {
+    left: 447px;
+}
+
+#save-image-button {
+    background-color: rgb(46, 46, 46);
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-align: center;
+    cursor: pointer;
+}
+
+#save-image-button:hover {
+    background-color: rgb(56, 56, 56);
+}
