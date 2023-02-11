@@ -8,7 +8,6 @@ var onChangeText = function (textField, field, pad) {
     $(field).html(value);
 }
 
-
 $(document).ready(function () {
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
