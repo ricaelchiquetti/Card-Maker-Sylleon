@@ -106,9 +106,10 @@ $(document).ready(function () {
 
             $("#cardLine").attr("src", 'img/' + style + '/line_' + color + '.svg');
 
+
+            // Achar um modo de alterar a cor da IMG ou pedir para o Neko as img já coloridas.
             base.find('path').css('fill', colorBaseHexa);
             base.find('polygon').css('fill', colorBaseHexa);
-
             icon.find('path').css('fill', colorIconHexa);
         } else {
             $("#cardLine").attr("src", '');
