@@ -8,7 +8,42 @@ var onChangeText = function (textField, field, pad) {
     $(field).html(value);
 }
 
+var getCodeColorByName = function (color) {
+    switch (color) {
+        case 'red':
+            return '#FFC5C5';
+        case 'orange':
+            return '#FFB164';//DEVE ESTAR ERRADO
+        case 'yellow':
+            return '#604F31';
+        case 'green':
+            return '#CDEFDE';
+        case 'blue':
+            return '#BFE7FA';
+        case 'purple':
+            return '#703364';
+    }
+}
+
+var getCodeColorIconByName = function (color) {
+    switch (color) {
+        case 'red':
+            return '#7E0000';
+        case 'orange':
+            return '#9A3D00';
+        case 'yellow':
+            return '#FAF8CF';
+        case 'green':
+            return '#264032';
+        case 'blue':
+            return '#005C8B';
+        case 'purple':
+            return '#EFD8E8';
+    }
+}
+
 $(document).ready(function () {
+
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
 
@@ -45,12 +80,38 @@ $(document).ready(function () {
         onChangeText("#inputNumberMove", "#cardMove", 2);
     });
 
+    $("#styleCard").on("change", function () {
+        let style = $(this).val();
+
+        if (style) {
+            $("#cardBase").attr("src", 'img/' + style + '/base.svg');
+            $("#cardIcon").attr("src", 'img/' + style + '/icon.svg');
+        } else {
+            $("#cardIcon").attr("src", '');
+            $("#cardBase").attr("src", '');
+        }
+    });
+
     $("#color").on("change", function () {
         let color = $(this).val();
-        if (color) {
-            $("#cardBase").attr("src", 'img/base_' + color + '.svg');
-            $("#cardLine").attr("src", 'img/line_' + color + '.svg');
-            $("#cardIcon").attr("src", 'img/icon_' + color + '.svg');
+        let style = $("#styleCard").val();
+
+        if (color && style) {
+            let colorBaseHexa = getCodeColorByName(color),
+                colorIconHexa = getCodeColorIconByName(color),
+                base = $('#cardBase').contents().find('svg'),
+                icon = $('#cardIcon').contents().find('svg');
+
+            debugger;
+
+            $("#cardLine").attr("src", 'img/' + style + '/line_' + color + '.svg');
+
+            base.find('path').css('fill', colorBaseHexa);
+            base.find('polygon').css('fill', colorBaseHexa);
+
+            icon.find('path').css('fill', colorIconHexa);
+        } else {
+            $("#cardLine").attr("src", '');
         }
     });
 
@@ -63,24 +124,19 @@ $(document).ready(function () {
     });
 
     $('#save-image-button').click(function () {
-        $(".div-overlay").css("top", "88%");//GAMBI
-        $("#cardTextType").css("top", "4%");//GAMBI
-        // $(".number").css("top", "777%");//GAMBI
+        let element = document.getElementById('element-to-capture'),
+            cardName = $('#inputTextName').val() ? $('#inputTextName').val() : 'sem_nome';
 
-        html2canvas($('#element-to-capture')[0]).then(function (canvas) {
-            var link = document.createElement('a'),
-                cardName = $("#inputTextName").val() ? $("#inputTextName").val() : 'Card';
-
-            link.download = cardName + ".png";
-            link.href = canvas.toDataURL();
-            link.click();
-        });
-
-        $(".number").css("top", "772px");//GAMBI
-        $("#cardTextType").css("top", "40px");//GAMBI
-        $(".div-overlay").css("top", "0px");//GAMBI
+        htmlToImage.toPng(element)
+            .then(function (dataUrl) {
+                var link = document.createElement('a');
+                link.download = cardName + '.png';
+                link.href = dataUrl;
+                link.click();
+            });
     });
 
+    // Salva o Arquivo em um JSON
     $("#save-button").click(function () {
         var data = {};
         $("input:not([type='file']), select, textarea").each(function () {

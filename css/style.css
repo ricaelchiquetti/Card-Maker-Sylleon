@@ -44,17 +44,23 @@ textarea {
     text-align: center;
 }
 
-img {
+img,
+object {
     position: absolute;
     width: 600px;
+    height: 835px;
     left: 0px;
     top: 0px;
 }
 
 #element-to-capture {
     position: absolute;
-    height: 835px;
     width: 600px;
+    height: 835px;
+    left: 0px;
+    top: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .container {
@@ -64,9 +70,9 @@ img {
 .div-overlay {
     color: black;
     top: 0px;
-    position: absolute;
-    height: 835px;
+    position: relative;
     width: 600px;
+    height: 835px;
 }
 
 .text-over-image {

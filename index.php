@@ -8,6 +8,8 @@
     <link rel="stylesheet" type="text/css" href="css/font.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.svg.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html-to-image/1.11.11/html-to-image.min.js"></script>
     <script src="js/script.js"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,16 +20,23 @@
     <div class="container">
         <div class="left-side">
             <input type="text" name="nome" id="inputTextName" placeholder="Nome" maxlength="100">
+            <input type="number" name="level" id="inputTextLevel" placeholder="Nível" maxlength="3">
             <input type="file" id="file" name="file" accept="image/*">
-            <select name="Estilo">
+            <select name="style" id="styleCard">
+                <option value="">Selecione uma Tipo</option>
                 <option value="creature">Criatura</option>
             </select>
             <select name="cor" id="color">
                 <option value="">Selecione uma Cor</option>
                 <option value="red">Vermelho</option>
+                <option value="orange">Laranja</option>
+                <option value="yellow">Amarelo</option>
+                <option value="green">Verde</option>
+                <option value="blue">Azul</option>
+                <option value="purple">Roxo</option>
             </select>
             <input type="text" name="tipo" id="inputTextType" placeholder="Tipo" maxlength="200">
-            <select name="Habilidade">
+            <select name="skill" id="skill">
                 <option value="">Selecione uma Habilidade</option>
             </select>
             <textarea name="descricao" id="inputTextDesc" placeholder="Descrição"></textarea>
