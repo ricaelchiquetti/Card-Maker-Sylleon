@@ -42,10 +42,46 @@ var getCodeColorIconByName = function (color) {
     }
 }
 
+var changeCardColor = function () {
+    let color = $('#color').val();
+    let style = $("#styleCard").val();
+
+    if (color && style) {
+        let colorBaseHexa = getCodeColorByName(color),
+            colorIconHexa = getCodeColorIconByName(color);
+
+        $("#cardBase").attr("src", 'img/' + style + '/base.svg');
+        $("#cardIcon").attr("src", 'img/' + style + '/icon.svg');
+        $("#cardLine").attr("src", 'img/' + style + '/line_' + color + '.svg');
+
+        // Achar um modo de alterar a cor da IMG ou pedir para o Neko as img já coloridas.
+        // base.find('path').css('fill', colorBaseHexa);
+        // base.find('polygon').css('fill', colorBaseHexa);
+        // icon.find('path').css('fill', colorIconHexa);
+    } else {
+        $("#cardLine").attr("src", '');
+        $("#cardIcon").attr("src", '');
+        $("#cardBase").attr("src", '');
+    }
+}
+
 $(document).ready(function () {
 
     var windowWidth = $(window).width();
     var windowHeight = $(window).height();
+
+    $(window).on('load', () => {
+        fetch('json/skill.json')
+            .then(response => response.json())
+            .then(data => {
+                data.forEach(item => {
+                    $('#skill').append($('<option>', {
+                        value: item.value,
+                        text: item.text
+                    }));
+                });
+            });
+    });
 
     $(window).resize(function () {
         windowWidth = $(window).width();
@@ -81,39 +117,11 @@ $(document).ready(function () {
     });
 
     $("#styleCard").on("change", function () {
-        let style = $(this).val();
-
-        if (style) {
-            $("#cardBase").attr("src", 'img/' + style + '/base.svg');
-            $("#cardIcon").attr("src", 'img/' + style + '/icon.svg');
-        } else {
-            $("#cardIcon").attr("src", '');
-            $("#cardBase").attr("src", '');
-        }
+        changeCardColor();
     });
 
     $("#color").on("change", function () {
-        let color = $(this).val();
-        let style = $("#styleCard").val();
-
-        if (color && style) {
-            let colorBaseHexa = getCodeColorByName(color),
-                colorIconHexa = getCodeColorIconByName(color),
-                base = $('#cardBase').contents().find('svg'),
-                icon = $('#cardIcon').contents().find('svg');
-
-            debugger;
-
-            $("#cardLine").attr("src", 'img/' + style + '/line_' + color + '.svg');
-
-
-            // Achar um modo de alterar a cor da IMG ou pedir para o Neko as img já coloridas.
-            base.find('path').css('fill', colorBaseHexa);
-            base.find('polygon').css('fill', colorBaseHexa);
-            icon.find('path').css('fill', colorIconHexa);
-        } else {
-            $("#cardLine").attr("src", '');
-        }
+        changeCardColor();
     });
 
     $("#file").on("change", function () {
@@ -176,5 +184,3 @@ $(document).ready(function () {
     });
 
 });
-
-

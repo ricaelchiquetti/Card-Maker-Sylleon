@@ -1,0 +1,74 @@
+[
+    {
+      "text": "IMPACTO",
+      "value": "IMPACTO - Após a ação de movimento desta criatura ela ganha +1 de ataque."
+    },
+    {
+      "text": "SACRIFÍCIO",
+      "value": "SACRIFÍCIO - Quando em campo esta criatura pode ser colocada no cimitério, se o fizer, dê dano igual ao nível desta criatura diretamente a um de seus oponentes."
+    },
+    {
+      "text": "FEROZ",
+      "value": "FEROZ - A criatura com esta habilidade não pode ser bloqueada, exeto por Protetor e Lutador."
+    },
+    {
+      "text": "ATROPELAR",
+      "value": "ATROPELAR - Se esta criatura derrotar a criatura adversária, ela passa a ocupar a casa onde a criatura derrotada estava."
+    },
+    {
+      "text": "INICIATIVA",
+      "value": "INICIATIVA - Ao entrar em campo esta criatura ganha uma ação extra."
+    },
+    {
+      "text": "INVESTIDA",
+      "value": "INVESTIDA - Antes de começar a fase de ação, se essa criatura está adjacente a outra de mesma cor, apenas uma vez, mova-a 1 casa."
+    },
+    {
+      "text": "REFORÇO",
+      "value": "REFORÇO - Ao entrar em campo olhe as 5 cartas no topo do seu baralho, escolha uma criatura nível um, coloque-a no topo e o resto no fim do baralho."
+    },
+    {
+      "text": "EXÉRCITO",
+      "value": "EXÉRCITO - Esta criatura ganha +1 de ataque para cada criatura aliada adjacente a ela."
+    },
+    {
+      "text": "PRODÍGIO",
+      "value": "PRODÍGIO - Quando equipada esta criatura recebe mais um no status indicado."
+    },
+    {
+      "text": "FUGAZ",
+      "value": "FUGAZ - Esta criatura não pode se atacada à distancia."
+    },
+    {
+      "text": "DESARMAR",
+      "value": "DESARMAR - A criatura atacada por esta não pode atacar até o final próximo turno."
+    },
+    {
+      "text": "CONTENÇÃO",
+      "value": "CONTENÇÃO - A casa em frente a esta criatura é inascessível para criaturas de uma cor selecionada pelo jogador."
+    },
+    {
+      "text": "DISSIPAR",
+      "value": "DISSIPAR - As criaturas adversárias adjacentes a essa têm seus efeitos anulados."
+    },
+    {
+      "text": "PREVISÃO",
+      "value": "PREVISÃO - Olhe o topo do baralho, você pode escolher deixá-la no topo ou colocá-la no fim do baralho."
+    },
+    {
+      "text": "METAMORFO",
+      "value": "METAMORFO - Quando atacar uma criatura adversária, esta criatura ganha até o fim do turno a mesma habilidade."
+    },
+    {
+      "text": "DILIGENTE",
+      "value": "DILIGENTE - Escolha a cor esta criatura tem mais um de defesa contra ela."
+    },
+    {
+      "text": "REGENERAR",
+      "value": "REGENERAR -  Todods os atributos voltam à normalidade ao final da ação do oponente."
+    },
+    {
+      "text": "PROVOCAR",
+      "value": "PROVOCAR - Esta criatura é escolhida como alvo em vez de qualquer aliado nível um adjacente caso seja atacado por um inimigo."
+    }
+]
